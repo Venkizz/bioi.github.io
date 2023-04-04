@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOI E-COMMERCE</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="utils.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    
+    <script>
+                    function display() 
+                {
+                        var name =document.forms.RegForm.Name.value;
+                        var email =document.forms.RegForm.EMail.value;
+                        var phone =document.forms.RegForm.Telephone.value;
+                        var what =document.forms.RegForm.Subject.value;
+                        var password =document.forms.RegForm.Password.value;
+                        var address =document.forms.RegForm.Address.value;
+            var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  
+            var regPhone=/^\d{10}$/;                                    
+            var regName = /\d+$/g;                              
+                        if (name == "" || regName.test(name))  
+                         {
+                            window.alert("Please enter your name properly.");      
+                            name.focus();
+                            return false;
+                        }
+                        if (address == "")
+                         {
+                            window.alert("Please enter your address.");
+                            address.focus();
+                            return false;
+                        }
+        if (email == "" || !regEmail.test(email))
+                         {
+                            window.alert("Please enter a valid e-mail address.");
+                            email.focus();
+                            return false;
+                        }
+                        if (password == "")
+                         {
+                            alert("Please enter your password");
+                            password.focus();
+                            return false;
+                        }
+                        if(password.length <6)
+                        {
+                            alert("Password should be atleast 6 character long");
+                            password.focus();
+                            return false;
+                        }
+        if (phone == "" || !regPhone.test(phone)) 
+                        {
+                            alert("Please enter valid phone number.");
+                            phone.focus();
+                            return false;
+                        }
+                        if (what.selectedIndex == -1) {
+                            alert("Please enter your course.");
+                            what.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+</head>
+<body bgcolor="">
+    <!-- <div class="back">
+        <img src="back.jpg" alt=""> -->
+        
+    <script src="text.js"></script>
+      
+<header>
+   
+   <nav>
+       <div class="logo">
+           <!-- <img src="flipp.png" alt=""> -->
+           <a href="logo.html" target="">
+           <img src="bii.png" alt="" >
+           </a>
+       </div>
+    <u>
+    
+        
+     <li><a href="text.html">HOME</a> </li>
+     <li> <a href="Contact.html">CONTACT</a></li>
+     <li><a href="Address.html">ADDRESS</a></li>
+     </u>
+     <div class="search"> 
+        
+         <input type="text" name="" id="" placeholder="natural products">
+         <!-- <button>search</button> -->
+         <a href="af.html" target="green tea">
+         <button class= "btn.html">search</button>
+         
+         </a>
+         <a href=""> <div class="input-group mb-4" >
+            <span class="input-group-text bg-#16f20a"><i
+                    class="bi bi-bag text-black"></i></span>
+            
+                </a> 
+         <div class="signup">
+            <a href="signup1.html">
+      <button class="task2.html"> sign up</button>
+      
+    </a>
+   
+         </div>
+    </div>
+     </div>
+    </nav>
+  
+
+</header>
+<main>
+ 
+<section></section>
+    
+   
+<div class="slider" >
+    <center>
+
+             <h1 style="text-align: center;"><b>REGISTRATION FORM</b></h1>
+             <form name="RegForm" onsubmit="return display()" method="post">
+        <table  id="customers">
+        <tr><td>Name: </td><td><input type="text"    size="65" name="Name" /></td></tr>
+             <tr><td>Address: </td><td><input type="text" size="65" name="Address" /></td></tr>
+             <tr><td>E-mail Address:</td><td> <input type="text" size="65" name="EMail" />  </td></tr> 
+            <tr><td>Password: </td><td><input type="text" size="65" name="Password" /></td></tr>
+            <tr><td>Telephone: </td><td><input type="text "  size="65" name="Telephone" /></td></tr>
+             <tr><td>Select your state </td><td><select type="text"  name="Subject">
+                 <option>Andhra pradesh </option>
+                            <option>Telengana</option>
+                            <option>kerala</option>
+                            <option>Tamil nadu</option>
+                            </select> </td></tr>
+               <tr><td>Comments:</td><td> <textarea cols="55" name="Comment"> </textarea></td></tr>
+                       <tr><td></td><td> <input type="submit"  value="send" name="Submit" />
+                        <input type="reset"   value="Reset" name="Reset" /></td></tr>
+                </form> 
+</div>
+<div id="line">
+</div>
+    
+
+
+</main>
+
+<!-- <footer class="flex-all-center">
+    <p>
+        
+        copyright &copy; mycart.com
+    </p>
+</footer> -->
+
+</body>
+
+</html>
